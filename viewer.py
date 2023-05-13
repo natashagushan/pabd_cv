@@ -53,7 +53,7 @@ class TkImgViewer(Frame):
             self.curr_img_index -= 1
         self.update_ui()
 
-    def next_img(self):
+     def next_img(self):
         if self.curr_img_index < len(self.filenames) - 1:
             self.curr_img_index += 1
         self.update_ui()
