@@ -1,0 +1,4 @@
+[core]
+    remote = my_local_remote
+['remote "my_local_remote"']
+    url = C:\Users\221774\PycharmProjects\pabd_cv\files_remote\
