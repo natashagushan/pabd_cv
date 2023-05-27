@@ -1,11 +1,8 @@
 import os
 import shutil
-
-import PIL
+import tensorflow as tf
+from PIL import Image
 import click
-import tensorflow
-import tf
-
 
 @click.command()
 @click.option('-i', '--in_dir', default='data/raw/kaggle')
@@ -32,7 +29,7 @@ def copy_imgs(in_dir, out_dir, n_img, img_size):
     def resize_and_save(img_list, category_name):
         for cat_img in img_list[:n_img]:
             in_img_path = os.path.join(in_dir, cat_img)
-            img = PIL.Image.open(in_img_path)
+            img = Image.open(in_img_path)
             img_r = img.resize((img_size, img_size))
             out_img_path = os.path.join(out_dir, category_name, cat_img)
             img_r.save(out_img_path)
